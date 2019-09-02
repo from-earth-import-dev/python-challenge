@@ -11,7 +11,7 @@ def currency(amount):
 # Find total months, total profit, and monthly profit differential
 months = 0
 monthly_total_profit = []
-monthly_diff = [] 
+monthly_diff = []
 max_profit = 0
 
 with open(budget_csv) as budget_csv:
@@ -23,7 +23,7 @@ with open(budget_csv) as budget_csv:
         monthly_total_profit.append((row[0], int(row[1])))
 total_sum = currency(sum([month[1] for month in monthly_total_profit]))
 
-for index in range(len(monthly_total_profit) - 1): 
+for index in range(len(monthly_total_profit) - 1):
     if monthly_total_profit[index + 1]:
         monthly_diff.append((monthly_total_profit[index + 1][0], (monthly_total_profit[index+1][1] - monthly_total_profit[index][1])))
 
