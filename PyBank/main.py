@@ -52,6 +52,7 @@ print(f'Average Change: {average_monthly_diff}')
 print(f'Greatest Increase in Profits: {best_month[0]} ({currency(best_month[1])})')
 print(f'Greatest Decrease in Profits: {worst_month[0]} ({currency(worst_month[1])})\n')
 
+# Output results to a .txt file
 output = os.path.join(".", "pybank_analyis_output.txt")
 with open(output, "w") as file:
     file.write('\nFinancial Analysis\n')
